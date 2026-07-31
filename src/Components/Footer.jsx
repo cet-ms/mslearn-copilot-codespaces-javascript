@@ -26,6 +26,9 @@ import youTubeIcon from "../images/socials/youtube.svg";
  *  Opening links in new tabs: https://www.freecodecamp.org/news/how-to-use-html-to-open-link-in-new-tab/
  */
 
+const AnimatedIcon = ({ src, alt }) => (
+  <img src={src} alt={alt} className="socialIcon" />
+);
 const Footer = (props) => {
   const {
     devDotTo,
@@ -62,17 +65,17 @@ const Footer = (props) => {
       >
         {email && (
           <a href={`mailto:${email}`}>
-            <img src={envelopeIcon} alt="email" className="socialIcon" />
+            <AnimatedIcon src={envelopeIcon} alt="email" />
           </a>
         )}
         {devDotTo && (
           <a href={`https://dev.to/${devDotTo}`} target="_blank" rel="noopener noreferrer">
-            <img src={devDotToIcon} alt="Dev.to" className="socialIcon" />
+            <AnimatedIcon src={devDotToIcon} alt="Dev.to" />
           </a>
         )}
         {gitHub && (
           <a href={`https://github.com/${gitHub}`} target="_blank" rel="noopener noreferrer">
-            <img src={gitHubIcon} alt="GitHub" className="socialIcon" />
+            <AnimatedIcon src={gitHubIcon} alt="GitHub" />
           </a>
         )}
         {instagram && (
@@ -81,7 +84,7 @@ const Footer = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={instagramIcon} alt="Instagram" className="socialIcon" />
+            <AnimatedIcon src={instagramIcon} alt="Instagram" />
           </a>
         )}
         {linkedIn && (
@@ -90,17 +93,17 @@ const Footer = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={linkedInIcon} alt="LinkedIn" className="socialIcon" />
+            <AnimatedIcon src={linkedInIcon} alt="LinkedIn" />
           </a>
         )}
         {medium && (
           <a href={`https://medium.com/@${medium}`} target="_blank" rel="noopener noreferrer">
-            <img src={mediumIcon} alt="Medium" className="socialIcon" />
+            <AnimatedIcon src={mediumIcon} alt="Medium" />
           </a>
         )}
         {twitter && (
           <a href={`https://twitter.com/${twitter}`} target="_blank" rel="noopener noreferrer">
-            <img src={twitterIcon} alt="Twitter" className="socialIcon" />
+            <AnimatedIcon src={twitterIcon} alt="Twitter" />
           </a>
         )}
         {youTube && (
@@ -109,7 +112,7 @@ const Footer = (props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={youTubeIcon} alt="YouTube" className="socialIcon" />
+            <AnimatedIcon src={youTubeIcon} alt="YouTube" />
           </a>
         )}
       </div>
